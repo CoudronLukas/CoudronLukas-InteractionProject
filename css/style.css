@@ -1,12 +1,12 @@
 @font-face{
   font-family: "Poppins";
   font-weight: 400;
-  src: url("../fonts/Poppins-Regular.ttf") format("ttf")
+  src: url("../fonts/Poppins-Regular.ttf") format(".ttf")
 }
 @font-face{
   font-family: "Poppins";
   font-weight: 600;
-  src: url("../fonts/Poppins-Bold.ttf") format("ttf")
+  src: url("../fonts/Poppins-Bold.ttf") format(".ttf")
 }
 
 :root{
@@ -21,10 +21,13 @@
   --global-color-very-bad:#ED473B;
   --global-color-extremly-bad:#75246B;
   --global-color-mega-bad:#3B1E37;
+
+  --size-small: 0.625rem;
+  --size-medium: 1.5rem;
 }
 
 html{
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
   position: fixed;
@@ -65,14 +68,14 @@ option:active{
 
 /* COUNTRY */
 .c-country{
-    font-size: 24px;
+    font-size: var(--size-medium);
     color: black;
     background-color: #eeeeee;
     font-weight: bold;
     border-radius: 10px;
     width: 100%;
     height: 3em;
-    padding:24px;
+    padding: var(--size-medium);
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -80,12 +83,12 @@ option:active{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top: var(--size-medium);
+    margin-bottom: var(--size-medium);
 }
 
 .c-country img{
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 
 .c-country:hover{
@@ -96,12 +99,12 @@ option:active{
     display: inline;
     text-align: center;
     vertical-align: center;
-    line-height: 3em;
+    line-height: 0.1875rem;
 }
 
 .c-flag{
-    height: 24px;
-    width: 32px;
+    height: var(--size-medium);
+    width: 2rem;
     display: inline;
     text-align: center;
     vertical-align: center;
@@ -114,7 +117,7 @@ option:active{
 }
 
 .background-white{
-  margin-bottom: 10px;
+  margin-bottom: var(--size-medium);
 }
 
 .c-pollution{
@@ -129,13 +132,13 @@ option:active{
 
 .js-pollution{
   background-color: var(--card-color);
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border-top-right-radius: var(--size-small);
+  border-top-left-radius: var(--size-small);
 }
 
 .Form {
   display: grid;
-  grid-gap: 8px;
+  grid-gap: 0.5rem;
   grid-template-columns: 100%;
   grid-template-rows: 40% 60%;
 }
@@ -147,12 +150,12 @@ option:active{
 
 .c-form--holder div{
   /* justify-items: center; */
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
   align-content: center;
 }
 
 .c-form--holder div label{
-  padding-top: 8px;
+  padding-top: 0.5rem;
 }
 
 .c-form--holder-content{
@@ -161,16 +164,16 @@ option:active{
 
 
 select{
-  width: 200px;
-  padding:10px 8px ;
-  border-radius: 10px;
+  width: 12.5rem;
+  padding: 0.625rem 0.5rem ;
+  border-radius: 0.625rem;
 }
 
 /* CSS GRID */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
   grid-gap: 1rem;
 }
 
@@ -186,10 +189,10 @@ select{
   align-content: space-between;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(1,1fr);
-  padding-left: 32px;
-  padding-right: 32px;
-  grid-gap: 32px;
-  margin-bottom: 32px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  grid-gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .Kaart 
@@ -217,8 +220,8 @@ select{
   place-self: center stretch;
   background:  linear-gradient(90deg, rgb(1, 1, 2), rgb(45, 45, 50));
   color: white;
-  padding: 16px;
-  margin-bottom: 32px;
+  padding: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: space-around;
 }
@@ -239,7 +242,7 @@ select{
 }
 
 .c-logo{
-  height: 30px;
+  height: 1.875rem;
 }
 
 .c-vlag{
@@ -251,7 +254,7 @@ select{
 
 
 
-@media (max-width: 700px){
+@media (max-width: 43.75rem){
   .grid-container{
     display: block
   }
@@ -259,7 +262,7 @@ select{
     position: relative;
   }
   .c-pollution{
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
 }
 

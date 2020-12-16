@@ -27,6 +27,9 @@
     --global-color-very-bad:#ED473B;
     --global-color-extremly-bad:#75246B;
     --global-color-mega-bad:#3B1E37;
+    
+    --size-small: 0.625rem;
+    --size-medium: 1.5rem;
   }
 
 /*------------------------------------*\
@@ -40,7 +43,7 @@
 */
 
 html {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
     font-family: 'Poppins';
     box-sizing: border-box;
@@ -64,7 +67,7 @@ Default markup for images to make them responsive
 img {
     max-width: 100%;
     vertical-align: top;
-    margin-left: 24px;
+    margin-left: var(--size-medium);
 }
 
 /*
@@ -81,36 +84,36 @@ h3 {
 
 h1 {
     color: var(--color-neutral-dark);
-    font-size: 38px;
-    line-height: 48px;
+    font-size: 2.37rem;
+    line-height: 3rem;
     margin: 0 0 24px;
 }
 
 h2 {
-    font-size: 32px;
-    line-height: 40px;
-    margin-top: 24px;
-    margin-bottom: 16px;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-top: var(--size-medium);
+    margin-bottom: 1rem;
 }
 
 h3 {
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 1.75rem;
+    line-height: 2rem;
     margin: 0 0 12px;
     font-weight: normal;
 }
 
 h4{
-    font-size: 24px;
+    font-size: var(--size-medium);
     font-weight: lighter;
     margin-right: 15%;
     margin-left: 15%;
-    margin-top: 32px;
+    margin-top: 2rem;
     margin-bottom: 6px;
 }
 
 h5{
-    font-size: 24px;
+    font-size: var(--size-medium);
     font-weight: lighter;
     margin-right: 15%;
     margin-left: 15%;
@@ -119,9 +122,9 @@ h5{
 }
 
 h6 {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
-    line-height: 24px;
+    line-height: var(--size-medium);
 }
 /*------------------------------------*\
 #OBJECTS
@@ -136,7 +139,7 @@ h6 {
     display: grid;
     text-align: center;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: 30px;
+    grid-gap: 1.875rem;
     width: 95%;
     height: 100%;
     justify-content: center;
@@ -145,9 +148,9 @@ h6 {
 .container-item{
     grid-column: 1 / span 4; /*DEZE ZORGT DAT DE 4 ITEMS ALLE KOLOMMEN INNEMEN deelt de div in 4 delen*/
 
-    padding: 16px;
+    padding: 1rem;
     width: 100%;
-    min-height: 50px; /*MOET MIN-HEIGHT ZIJN ANDERS WERKEN DE UTILITY HEIGHT KLASSES NIET MEER*/
+    min-height: 3.125rem; /*MOET MIN-HEIGHT ZIJN ANDERS WERKEN DE UTILITY HEIGHT KLASSES NIET MEER*/
 }
 
 .container-background{
@@ -165,11 +168,11 @@ h6 {
 
 input.center-button{
     width: 30%;
-    height: 50px;
+    height: 3.125rem;
     display:inline-block;
     padding:0.35em 1.2em;
     border:0.1em solid black;
-    margin-top: 35px;
+    margin-top: 2.1875rem;
     border-radius:7px;
     box-sizing: border-box;
     text-decoration:none;
@@ -186,7 +189,7 @@ input.center-button:hover{
 
 .c-form__name{
     display: inline-block;
-    height: 40px;
+    height: 2.5rem;
     border-style: solid;
     border-radius: 3px;
     width: 65%;
@@ -237,7 +240,7 @@ input.center-button:hover{
     grid-row: span 1;
 }
 
-@media(max-width: 950px){
+@media(max-width: 60rem){
     .grid-container{
         display: block;
     }
