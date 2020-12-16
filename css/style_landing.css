@@ -1,0 +1,247 @@
+/*------------------------------------*\
+#FONTS
+\*------------------------------------*/
+@font-face{
+    font-family: "Poppins";
+    font-weight: 600;
+    src: url("../fonts/Poppins-Bold.ttf") format("ttf")
+}
+@font-face{
+    font-family: "Poppins";
+    font-weight: 400;
+    src: url("../fonts/Poppins-Regular.ttf") format("ttf")
+  }
+/*------------------------------------*\
+#Variables
+\*------------------------------------*/
+
+:root{
+    --card-color:#cacaca;
+    --header-color:#cbd6ff74 ;
+    --global-color-alpha-light: #2578bb;
+    --global-color-alpha: #20659d;
+    --global-color-alpha-dark: #173F5F;
+    --global-color-good:#3CAE57;
+    --global-color-medium:#F6D55C;
+    --global-color-bad:#ED893B;
+    --global-color-very-bad:#ED473B;
+    --global-color-extremly-bad:#75246B;
+    --global-color-mega-bad:#3B1E37;
+  }
+
+/*------------------------------------*\
+#GENERIC
+\*------------------------------------*/
+
+/*
+    Generic: Page
+    ---
+    Global page styles + universal box-sizing:
+*/
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: white;
+    position: fixed;
+    height: 100%;
+}
+
+/*------------------------------------*\
+#Elements
+\*------------------------------------*/
+
+/*
+Elements: Images
+---
+Default markup for images to make them responsive
+*/
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+    margin-left: 24px;
+}
+
+/*
+    Elements: typography
+    ---
+    Default markup for typographic elements
+*/
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    font-family: 'Poppins';
+}
+
+h1 {
+    color: var(--color-neutral-dark);
+    font-size: 38px;
+    line-height: 48px;
+    margin: 0 0 24px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 32px;
+    margin: 0 0 12px;
+    font-weight: normal;
+}
+
+h4{
+    font-size: 24px;
+    font-weight: lighter;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-top: 32px;
+    margin-bottom: 6px;
+}
+
+h5{
+    font-size: 24px;
+    font-weight: lighter;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 12px;
+    margin-top: 0;
+}
+
+h6 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+/*------------------------------------*\
+#OBJECTS
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+#COMPONENTS
+\*------------------------------------*/
+.grid-container{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+    width: 95%;
+    height: 100%;
+    justify-content: center;
+}
+
+.container-item{
+    grid-column: 1 / span 4; /*DEZE ZORGT DAT DE 4 ITEMS ALLE KOLOMMEN INNEMEN deelt de div in 4 delen*/
+
+    padding: 16px;
+    width: 100%;
+    min-height: 50px; /*MOET MIN-HEIGHT ZIJN ANDERS WERKEN DE UTILITY HEIGHT KLASSES NIET MEER*/
+}
+
+.container-background{
+    color: white;
+    background:  linear-gradient(90deg, rgb(1, 1, 2), rgb(45, 45, 50));
+    border-radius: 5px;
+}
+
+.mockup{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+input.center-button{
+    width: 30%;
+    height: 50px;
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid black;
+    margin-top: 35px;
+    border-radius:7px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: inherit;
+    font-weight:300;
+    color:white;
+    background-color: var(--global-color-alpha);
+    text-align:center;
+    transition: all 0.2s;
+}
+input.center-button:hover{
+    background-color:var(--global-color-alpha-light);
+}
+
+.c-form__name{
+    display: inline-block;
+    height: 40px;
+    border-style: solid;
+    border-radius: 3px;
+    width: 65%;
+}
+
+.c-form__name:hover{
+    border-color: var(--global-color-alpha);
+}
+
+.box4{
+    display: inline-block;
+}
+
+.c-logo{
+    fill: white;
+}
+
+.c-wrapper{
+    display: flex;
+    align-items: stretch;
+}
+/*------------------------------------*\
+#UTILITIES
+\*------------------------------------*/
+
+/*
+    Utilities: CSS GRID
+
+*/
+
+.u-grid-width-4{
+    grid-column: span 4;
+}
+
+.u-grid-width-2{
+    grid-column: span 2;
+}
+
+.u-grid-height-2{
+    grid-row: span 2;
+}
+
+.u-grid-height-4{
+    grid-row: span 3;
+}
+
+.u-grid-height-1{
+    grid-row: span 1;
+}
+
+@media(max-width: 950px){
+    .grid-container{
+        display: block;
+    }
+    html{
+        position: relative;
+    }
+}

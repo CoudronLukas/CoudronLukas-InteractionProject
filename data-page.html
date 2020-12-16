@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Map</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <link rel='icon' href='img\favicon.ico' type='img\favicon.ico' >
+        <link rel="stylesheet" href="css/style.css"/>
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+        <script src="javascript/script.js"></script>
+    </head>
+    <body>
+        <div class="backdrop">
+            <div class="loader"> 
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            </div>
+        </div>
+        <div class="c-header" onclick="window.location.href='#'">
+            <div class="c-header_content">
+                <img  src="img\8a29b47c8bfd8de03a1392b87ebd2a55.svg" class="c-logo" alt="logo of the page">
+                <span class="c-header-text">Air Quality Map</span>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="Form">
+                <div class="c-form--holder">
+                    <div>
+                        <label for="countries">Choose a Country:</label>
+                        <select placeholder="Select Country" name="countries" id="countries" class="js-countries">
+                            <option value="">Select a country</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="states">Choose a state:</label>
+                        <select placeholder="Select State" name="states" id="states" class="js-states">
+                            <option class="option_state" value="">Select a state</option>
+                        </select>
+                    </div>
+                    <div class="c-form--holder-content">
+                        <label for="cities">Choose a city:</label>
+                        <select placeholder="Select a City" name="cities" id="cities" class="js-cities">
+                            <option class="option_city" value="">Select a city</option>
+                        </select>
+                    </div>  
+                </div>
+                
+                <div class="c-pollution ">
+                    <div class="js-vlag js-pollution">
+                        <p>Overzicht: </p>
+                    </div>
+                    <div class="c-pollution_item">
+                        <p>Air Quality Index: <span class="js-airqual"></span></p>
+                    </div>
+                    <div class="c-pollution_item">
+                        <p>Polution Level: <span class="js-state"></span></p>
+                    </div>
+                    <div class="c-pollution_item">
+                        <p>Warnings: <span class="js-warnings">None</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Kaart">
+                <div id="mapid"></div>
+            </div>
+          </div>
+    </body>
+</html>
